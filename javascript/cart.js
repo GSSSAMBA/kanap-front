@@ -9,7 +9,7 @@ function afficherPanier() {
     if (panier === null || panier.lenght == 0) {
         document.querySelector("#cartAndFormContainer > h1").textContent += " est vide";
     }
-   
+
     // Si il y a des éléments dans le panier
     else {
         for (i = 0; i < panier.length; i++) {
@@ -61,7 +61,7 @@ function getNewQty(e) {
         panier.splice(index, 1);
         localStorage.setItem("produit", JSON.stringify(panier));
         location.reload();
-    } 
+    }
     // if (newQty > 100){
     //     newQty = 100;
     //  }
@@ -93,7 +93,7 @@ function totalQty() {
         let quantity = parseInt(panier[i][0].qty);
         totalqty += quantity;
     }
-    
+
     return totalqty;
 }
 
@@ -232,7 +232,8 @@ boutonCommander.addEventListener("click", function (event) {
             body: JSON.stringify(commande),
             headers: { "Content-Type": "application/json" },
         };
-        fetch("http://localhost:3000/api/products/order", options)
+        fetch("http://https://kanap-back-production.up.railway.app/api/products/order", options)
+            // fetch("http://localhost:3000/api/products/order", options)
             .then(function (response) {
                 return response.json();
             })

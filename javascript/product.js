@@ -4,7 +4,8 @@ let idProduct = params.get("id");
 
 //Fetch des données par rapport à l'id récupéré dans l'url du produit
 const fetchProductId = async function () {
-    await fetch(`http://localhost:3000/api/products/${idProduct}`)
+    await fetch(`http://https://kanap-back-production.up.railway.app/api/products/${idProduct}`)
+        // await fetch(`http://localhost:3000/api/products/${idProduct}`)
         .then(function (res) {
             return res.json();
         })
@@ -49,10 +50,10 @@ cartButton.addEventListener("click", function (e) {
         let qty_chiffre = document.querySelector("#quantity").value;
         let qty = Number(qty_chiffre);
 
-        if(qty > 100) {
-            alert ("La quantité doit etre inférieur à 100")
-            return 
-            }
+        if (qty > 100) {
+            alert("La quantité doit etre inférieur à 100")
+            return
+        }
 
 
         // let maxQuantityAllowed = document.getElementById("quantity");{
