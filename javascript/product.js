@@ -4,7 +4,8 @@ let idProduct = params.get("id");
 
 //Fetch des données par rapport à l'id récupéré dans l'url du produit
 const fetchProductId = async function () {
-    await fetch(`http://https://kanap-back-production.up.railway.app/api/products/${idProduct}`)
+    await fetch(`https://kanap-back-production.up.railway.app/api/products/${idProduct}`)
+        // await fetch(`http://https://kanap-back-production.up.railway.app/api/products/${idProduct}`)
         // await fetch(`http://localhost:3000/api/products/${idProduct}`)
         .then(function (res) {
             return res.json();

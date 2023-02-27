@@ -232,7 +232,8 @@ boutonCommander.addEventListener("click", function (event) {
             body: JSON.stringify(commande),
             headers: { "Content-Type": "application/json" },
         };
-        fetch("http://https://kanap-back-production.up.railway.app/api/products/order", options)
+        fetch("https://kanap-back-production.up.railway.app/api/products/order", options)
+            // fetch("http://https://kanap-back-production.up.railway.app/api/products/order", options)
             // fetch("http://localhost:3000/api/products/order", options)
             .then(function (response) {
                 return response.json();

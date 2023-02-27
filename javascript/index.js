@@ -2,7 +2,8 @@
 
 const recupererLesProduits = async function () {
     // await fetch("http://localhost:3000/api/products")
-    await fetch("http://https://kanap-back-production.up.railway.app/api/products")
+    await fetch("https://kanap-back-production.up.railway.app/api/products")
+        // await fetch("http://https://kanap-back-production.up.railway.app/api/products")
         .then(function (res) {
             return res.json();
         })
