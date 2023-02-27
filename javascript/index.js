@@ -21,7 +21,7 @@ async function afficherLesProduits() {
     await recupererLesProduits();
     products.forEach((product) => {
         productElt.innerHTML += `
-        <a href="./product.html?id=${product._id}">
+        <a href="./html/product.html?id=${product._id}">
         <article>
             <img src="${product.imageUrl}" alt="${product.altTxt}" />
             <h3 class="productName">${product.name}</h3>
@@ -31,3 +31,17 @@ async function afficherLesProduits() {
     });
 }
 afficherLesProduits();
+// async function afficherLesProduits() {
+//     await recupererLesProduits();
+//     products.forEach((product) => {
+//         productElt.innerHTML += `
+//         <a href="./product.html?id=${product._id}">
+//         <article>
+//             <img src="${product.imageUrl}" alt="${product.altTxt}" />
+//             <h3 class="productName">${product.name}</h3>
+//             <p class="productDescription">${product.description}</p>
+//         </article>
+//         </a>`;
+//     });
+// }
+// afficherLesProduits();
